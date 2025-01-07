@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                dir('path/to/project') {  // Make sure this points to the correct directory
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+    }
+}
